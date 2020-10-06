@@ -1,0 +1,24 @@
+.hero {
+    height: toRem(200px);
+    overflow: hidden;
+    background-color: red;
+
+    @include breakpoint-up(large) {
+        height: auto;
+        overflow: visible;
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        height: 115%;
+
+        @include breakpoint-up(large) {            
+            width: toRem(288px);
+            // height: toRem(280px);
+            height: 100%;
+            object-fit: cover;
+            object-position: top left;
+        }
+    }
+}

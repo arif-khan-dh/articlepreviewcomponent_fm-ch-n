@@ -1,0 +1,354 @@
+@import url(https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap);
+html {
+  font-size: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: "Manrope", sans-serif;
+  font-size: 1rem;
+  background-color: #ecf2f8;
+  background-repeat: no-repeat;
+  padding-top: 4.75rem;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  margin: 0 auto;
+  width: 20.625rem;
+  border-radius: 0.625rem;
+  -webkit-box-shadow: 0 0px 50px 0px #999797;
+          box-shadow: 0 0px 50px 0px #999797;
+  overflow: hidden;
+}
+
+@media (min-width: 57.875rem) {
+  .container {
+    width: 45.75rem;
+    height: auto;
+    overflow: visible;
+  }
+}
+
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.97;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.97;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  0% {
+    opacity: .97;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  0% {
+    opacity: .97;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.fade-in {
+  -webkit-animation: fadein 450ms ease forwards;
+          animation: fadein 450ms ease forwards;
+}
+
+.fade-out {
+  -webkit-animation: fadeout 450ms ease forwards;
+          animation: fadeout 450ms ease forwards;
+}
+
+.social__media {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #48556a;
+  color: #9eafc2;
+  font-size: 0.625rem;
+  width: 100%;
+  height: 4.125rem;
+  bottom: 0;
+  padding-left: 2rem;
+}
+
+@media (min-width: 57.875rem) {
+  .social__media {
+    width: auto;
+    padding-right: 2rem;
+    bottom: 4.875rem;
+    right: 0;
+    -webkit-transform: translateX(calc(50% - 36px + 36px/4 - 40px));
+            transform: translateX(calc(50% - 36px + 36px/4 - 40px));
+    border-radius: 0.625rem;
+    height: 3.5rem;
+    opacity: 0;
+  }
+}
+
+@media (min-width: 57.875rem) {
+  .social__media::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #48556a;
+    top: 100%;
+    left: 50%;
+  }
+}
+
+.social__media span {
+  letter-spacing: 0.125rem;
+}
+
+.social__media svg {
+  margin-left: 1rem;
+}
+
+.social__media svg:nth-child(2) {
+  margin-left: 1.5rem;
+}
+
+.btn__floating {
+  position: absolute;
+  width: 2.25rem;
+  height: 2.25rem;
+  bottom: 1rem;
+  right: 2rem;
+  padding: 10px 0;
+  border-radius: 50%;
+  background-color: #ecf2f8;
+  cursor: pointer;
+  z-index: 2;
+  -webkit-transition: background-color 200ms linear;
+  transition: background-color 200ms linear;
+}
+
+@media (min-width: 57.875rem) {
+  .btn__floating {
+    right: 2.5rem;
+    bottom: 2rem;
+  }
+}
+
+.btn__floating svg {
+  display: block;
+  margin: 0 auto;
+}
+
+.btn__floating svg path {
+  -webkit-transition: fill 200ms ease-in-out;
+  transition: fill 200ms ease-in-out;
+}
+
+.btn__floating:hover {
+  background-color: #6d7f97;
+}
+
+.btn__floating:hover svg path {
+  fill: #ecf2f8;
+}
+
+.btn__floating:active {
+  background-color: #48556a;
+}
+
+.btn__floating:hover svg path {
+  fill: #ecf2f8;
+}
+
+.clicked {
+  background-color: #6d7f97;
+}
+
+.clicked svg path {
+  fill: #ecf2f8;
+}
+
+.clicked:hover {
+  background-color: #ecf2f8;
+}
+
+.clicked:hover svg path {
+  fill: #48556a;
+}
+
+.clicked:active {
+  background-color: #48556a;
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 57.875rem) {
+  .card {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    border-radius: 0.625rem;
+    overflow: hidden;
+  }
+}
+
+.hero {
+  height: 12.5rem;
+  overflow: hidden;
+  background-color: red;
+}
+
+@media (min-width: 57.875rem) {
+  .hero {
+    height: auto;
+    overflow: visible;
+  }
+}
+
+.hero img {
+  display: block;
+  width: 100%;
+  height: 115%;
+}
+
+@media (min-width: 57.875rem) {
+  .hero img {
+    width: 18rem;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: top left;
+       object-position: top left;
+  }
+}
+
+.content {
+  padding: 2.5rem 2rem 1.25rem 2rem;
+  background-color: white;
+}
+
+@media (min-width: 57.875rem) {
+  .content {
+    padding-left: 2.5rem;
+    padding-bottom: 2rem;
+  }
+}
+
+.content__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.content__text .text__headline {
+  color: #48556a;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+@media (min-width: 57.875rem) {
+  .content__text .text__headline {
+    font-size: 1.25rem;
+    line-height: 1.25;
+  }
+}
+
+.content__text .text__subheadline {
+  padding-top: 1.25rem;
+  color: #6d7f97;
+  font-size: 0.875rem;
+}
+
+.content__contact {
+  padding-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 57.875rem) {
+  .content__contact {
+    padding-top: 1.25rem;
+  }
+}
+
+.content__contact .contact__user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.content__contact .contact__user .user__pic {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+}
+
+.content__contact .contact__user .user__info {
+  padding-left: 1rem;
+}
+
+.content__contact .contact__user .user__info .info__name {
+  color: #48556a;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.content__contact .contact__user .user__info .info__date {
+  color: #6d7f97;
+  font-size: 0.875rem;
+}

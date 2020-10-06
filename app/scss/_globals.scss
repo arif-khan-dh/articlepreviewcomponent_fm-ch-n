@@ -1,0 +1,187 @@
+@import url(https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap);
+
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: "Manrope", sans-serif;
+    font-size: $font-sm;
+    background-color: $lightGrayishBlue;
+    background-repeat: no-repeat;
+    padding-top: toRem(76px);
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    margin: 0 auto;    
+    width: toRem(330px);
+    border-radius: toRem(10px);
+    box-shadow: 0 0px 50px 0px rgb(153, 151, 151);
+    overflow: hidden;
+
+    @include breakpoint-up(large) {
+        width: toRem(732px);
+        // height: toRem(280px);
+        height: auto;
+        overflow: visible;
+    }
+}
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0.97;
+    }
+}
+
+@keyframes fadeout {
+    0% {
+        opacity: .97;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.fade-in {
+    animation: fadein 450ms ease forwards;
+}
+
+.fade-out {
+    animation: fadeout 450ms ease forwards;
+}
+
+.social__media {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    background-color: $veryDarkGrayishBlue;
+    color: $grayishBlue;
+    font-size: $font-xxxsm;
+    width: 100%;
+    height: toRem(66px);
+    bottom: 0;
+    padding-left: toRem(32px);
+    
+
+    @include breakpoint-up(large) {
+        width: auto;
+        padding-right: toRem(32px);
+        bottom: toRem(32px + 36px + 10px);
+        // right: calc(50% - 36px/2 - 40px);
+        right: 0;
+        transform: translateX(calc(50% - 36px + 36px/4 - 40px));
+        border-radius: toRem(10px);
+        height: toRem(56px);
+        opacity: 0;
+    }
+
+    &::after {
+
+        @include breakpoint-up(large) {
+            position: absolute;
+            content: "";
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid $veryDarkGrayishBlue;
+            top: 100%;
+            left: 50%;
+        }
+    }
+
+    span {
+        letter-spacing: toRem(2px);
+    }
+
+    svg {
+        margin-left: toRem(16px);
+
+        &:nth-child(2){
+            margin-left: toRem(24px);
+        }
+    }
+}
+
+.media__hide {
+    // display: none;
+}
+
+.btn__floating {
+    position: absolute;
+    width: toRem(36px);
+    height: toRem(36px);
+    bottom: toRem(16px);
+    right: toRem(32px);
+    padding: 10px 0;
+    border-radius: 50%;
+    background-color: $lightGrayishBlue;
+    cursor: pointer;
+    z-index: 2;
+    transition: background-color 200ms linear;
+
+    @include breakpoint-up(large) {
+        right: toRem(40px);
+        bottom: toRem(32px);
+    }
+
+    svg {
+        display: block;
+        margin: 0 auto;
+
+        path {
+            transition: fill 200ms ease-in-out;
+        }
+    }
+
+    &:hover {
+        background-color: $desaturatedDarkBlue;
+    }
+
+    &:hover svg path {
+        fill: $lightGrayishBlue;
+    }
+
+    &:active {
+        background-color: $veryDarkGrayishBlue;
+    }
+
+    &:hover svg path {
+        fill: $lightGrayishBlue;
+    }
+}
+
+.clicked {
+    background-color: $desaturatedDarkBlue;
+
+    svg path {
+        fill: $lightGrayishBlue;
+    }
+
+    &:hover {
+        background-color: $lightGrayishBlue;
+    }
+
+    &:hover svg path {
+        fill: $veryDarkGrayishBlue;
+    }
+
+    &:active {
+        background-color: $veryDarkGrayishBlue;
+    }
+}

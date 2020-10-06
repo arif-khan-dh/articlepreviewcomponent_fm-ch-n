@@ -1,0 +1,72 @@
+.content {
+    padding: toRem(40px) toRem(32px) toRem(20px) toRem(32px);
+    background-color: white;
+
+    @include breakpoint-up(large) {
+        padding-left: toRem(40px);
+        padding-bottom: toRem(32px);
+    }
+    
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+
+        .text__headline {
+            color: $veryDarkGrayishBlue;
+            font-size: $font-sm;
+            font-weight: 700;
+
+            @include breakpoint-up(large) {
+                font-size: $font-lg;
+                line-height: 1.25;
+            }
+        }
+
+        .text__subheadline {
+            padding-top: toRem(20px);
+            color: $desaturatedDarkBlue;
+            font-size: $font-xsm;
+        }
+        
+    }
+
+    &__contact {
+        padding-top: toRem(32px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include breakpoint-up(large) {
+            padding-top: toRem(20px);
+        }
+
+
+        .contact__user {
+            display: flex;
+            justify-content: flex-start;
+            
+            .user__pic {
+                width: toRem(40px);
+                height: toRem(40px);
+                border-radius: 50%;
+            }
+
+            .user__info {
+                padding-left: toRem(16px);
+
+                .info__name {
+                    color: $veryDarkGrayishBlue;
+                    font-size: $font-xsm;
+                    font-weight: 700;
+                }
+
+                .info__date {
+                    color: $desaturatedDarkBlue;
+                    font-size: $font-xsm;
+                }
+            }
+        }
+
+    }
+}
