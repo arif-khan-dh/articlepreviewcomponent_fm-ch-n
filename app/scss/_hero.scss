@@ -1,7 +1,6 @@
 .hero {
     height: toRem(200px);
     overflow: hidden;
-    background-color: red;
 
     @include breakpoint-up(large) {
         height: auto;
@@ -12,6 +11,7 @@
         display: block;
         width: 100%;
         height: 115%;
+        object-fit: cover;
 
         @include breakpoint-up(large) {            
             width: toRem(288px);

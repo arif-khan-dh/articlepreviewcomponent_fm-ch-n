@@ -1,7 +1,7 @@
 .card {    
     display: flex;
     flex-direction: column;
-
+    
     @include breakpoint-up(large) {
         flex-direction: row;
         border-radius: toRem(10px);
