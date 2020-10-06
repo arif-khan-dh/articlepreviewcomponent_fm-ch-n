@@ -13,15 +13,15 @@ body {
     position: relative;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
     min-height: 100vh;
     font-family: "Manrope", sans-serif;
     font-size: $font-sm;
     background-color: $lightGrayishBlue;
     background-repeat: no-repeat;
-    // padding-top: toRem(76px);
+    padding-top: toRem(76px);
     overflow: hidden;
 }
 
