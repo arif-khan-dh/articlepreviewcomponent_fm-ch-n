@@ -14,12 +14,20 @@ body {
   position: relative;
   margin: 0;
   padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   min-height: 100vh;
   font-family: "Manrope", sans-serif;
   font-size: 1rem;
   background-color: #ecf2f8;
   background-repeat: no-repeat;
-  padding-top: 4.75rem;
   overflow: hidden;
 }
 
@@ -102,6 +110,7 @@ body {
   height: 4.125rem;
   bottom: 0;
   padding-left: 2rem;
+  opacity: 0;
 }
 
 @media (min-width: 57.875rem) {
@@ -114,7 +123,6 @@ body {
             transform: translateX(calc(50% - 36px + 36px/4 - 40px));
     border-radius: 0.625rem;
     height: 3.5rem;
-    opacity: 0;
   }
 }
 
